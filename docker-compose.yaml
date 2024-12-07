@@ -6,6 +6,11 @@ services:
       - "30303:30303"
     volumes:
       - "./ethereum:/root"
+    command: >
+      --http
+      --http.addr 0.0.0.0
+      --http.port 8545
+      --http.api web3,eth,net,personal
   
   ipfs:
     image: ipfs/kubo
