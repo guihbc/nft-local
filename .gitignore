@@ -1,3 +1,6 @@
 ethereum/
 ipfs/
 venv/
+contracts/
+node_modules/
+ganache/
