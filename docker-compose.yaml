@@ -1,0 +1,19 @@
+services:
+  ethereum:
+    image: ethereum/client-go
+    ports:
+      - "8545:8545"
+      - "30303:30303"
+    volumes:
+      - "./ethereum:/root"
+  
+  ipfs:
+    image: ipfs/kubo
+    ports:
+      - "4001:4001"
+      - "4001:4001/udp"
+      - "8080:8080"
+      - "5001:5001"
+    volumes:
+      - "./ipfs/export:/export"
+      - "./ipfs/data:/data/ipfs"
