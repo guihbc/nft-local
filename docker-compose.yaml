@@ -1,4 +1,17 @@
-services:  
+services:
+  # ethereum:
+  #   image: ethereum/client-go
+  #   ports:
+  #     - "8545:8545"
+  #     - "30303:30303"
+  #   volumes:
+  #     - "./ethereum:/root"
+  #   command: >
+  #     --http
+  #     --http.addr 0.0.0.0
+  #     --http.port 8545
+  #     --http.api web3,eth,net,personal
+  #     --dev
   ganache:
     image: trufflesuite/ganache-cli:latest
     container_name: ganache
