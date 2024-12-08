@@ -15,7 +15,7 @@ services:
       --http
       --http.addr 0.0.0.0
       --http.port 8545
-      --http.api web3,eth,net,personal,miner
+      --http.api web3,eth,net,personal,miner,admin
       --dev
   # ganache:
   #   image: trufflesuite/ganache-cli:latest

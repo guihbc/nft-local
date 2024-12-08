@@ -1,8 +1,7 @@
 # NFT Local
 
-Compile contract
+Compile the contract
 
 ```shell
 ./scripts/build-contract.sh
 ```
-
