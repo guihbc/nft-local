@@ -3,6 +3,7 @@
 ### Compile the contract
 
 ```shell
+npm install
 ./scripts/build-contract.sh
 ```
 
