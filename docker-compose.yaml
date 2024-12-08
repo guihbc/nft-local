@@ -1,9 +1,4 @@
 services:
-  ethereum-account:
-    build: .
-    ports:
-      - "8545:8545"
-      - "30303:30303"
   ethereum:
     image: ethereum/client-go
     ports:
@@ -17,24 +12,6 @@ services:
       --http.port 8545
       --http.api web3,eth,net,personal,miner,admin
       --dev
-  # ganache:
-  #   image: trufflesuite/ganache-cli:latest
-  #   container_name: ganache
-  #   ports:
-  #     - "8545:8545"
-  #   command: >
-  #     ganache-cli
-  #     --host 0.0.0.0
-  #     --port 8545
-  #     --deterministic
-  #     --gasLimit 0x1fffffffffffff
-  #     --debug true
-  #     --verbose
-  #   volumes:
-  #     - ./ganache:/root/.ganache
-  #   environment:
-  #     - NETWORK_ID=1337
-
   ipfs:
     image: ipfs/kubo
     ports:
