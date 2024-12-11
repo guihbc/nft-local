@@ -1,19 +1,46 @@
 # NFT Local
 
+### Requirements
+
+- Docker
+- Node.js
+- Python
+- [Solc (Solidity compiler)](https://docs.soliditylang.org/en/latest/installing-solidity.html)
+
 ### Compile the contract
 
 ```shell
 npm install
+```
+
+Need to use `npm install` to get the openzeppelin contracts
+
+```shell
 ./scripts/build-contract.sh
+```
+
+The `./scripts/build-contract.sh` is a shell script to compile the solidity contract and saves to the `contracts/` folder
+
+### Containers start
+
+```shell
+docker compose up
+```
+
+Or if using docker compose V1
+
+```shell
+docker-compose up
 ```
 
 ### Deploy the contract
 
 ```shell
-source venv/bin/activate
 pip install -r requirements.txt
 python ./scripts/deploy_contract.py
 ```
+
+The `./scripts/deploy_contract.py` is a Python Script to deploy the contract to the blockchain
 
 ### Send image to ipfs
 
@@ -36,3 +63,5 @@ Access file: http://localhost:8080/ipfs/{hash}
 ```shell
 python nft.py
 ```
+
+This file `nft.py` is where the deployed contract is called to mint the NFT
