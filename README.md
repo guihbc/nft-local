@@ -1,5 +1,8 @@
 # NFT Local
 
+This project is compiling an Smart Contract, deploying it to the Ethereum Network (Docker container), creating an NFT Metadata and
+calling the contract to mint the NFT.
+
 ### Requirements
 
 - Docker
